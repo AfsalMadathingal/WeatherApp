@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 require('dotenv').config();
-const mainRoute= require('./routes/mainRoute.js');
+const mainRoute= require('./Routes/mainRoute.js');
 const hbs = require('hbs');
 const path = require('path');
 
