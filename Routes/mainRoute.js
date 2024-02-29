@@ -25,11 +25,14 @@ router.get('/weather', (req, res) => {
         {
             console.log("elsse",data);
 
-            const {weather,main,name,cod} = data
 
-            if(cod === '404'){
+         
+
+            if(!data){
                 return res.render('errorNotFound')
             }
+
+            const {weather,main,name,cod} = data
             
             const temp = Math.floor(main?.temp - 273.15);
             const tempMin = Math.floor(main?.temp_min - 273.15);
