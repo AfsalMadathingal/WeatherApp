@@ -29,6 +29,13 @@ router.get('/weather', (req, res) => {
          
 
             if(!data){
+
+        
+                return res.render('errorNotFound')
+            }
+
+            if(data.cod === '404'){
+                
                 return res.render('errorNotFound')
             }
 
